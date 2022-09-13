@@ -1,1 +1,3 @@
-// this is pages
+import Home from "./Home";
+
+export { Home };
