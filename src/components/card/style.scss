@@ -1,0 +1,298 @@
+.card-container {
+  $light-color: #ffffff;
+  $primary-color: #fdae53;
+  $secondary-color: #f16c13;
+
+  width: 500px;
+  height: auto;
+  min-height: 500px;
+  background-color: $light-color;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+
+  & > .card-header {
+    width: 100%;
+    height: auto;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem 1rem 0 0;
+    animation: waves 0.6s linear infinite alternate;
+
+    @keyframes waves {
+      0% {
+        background-color: $primary-color;
+      }
+
+      100% {
+        background-color: $secondary-color;
+      }
+    }
+
+    & > p.title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      animation: title-rainbow 1.2s linear infinite alternate;
+
+      @keyframes title-rainbow {
+        0% {
+          color: #ff0000;
+        }
+
+        20% {
+          color: #0000ff;
+        }
+
+        40% {
+          color: #9400d3;
+        }
+
+        60% {
+          color: #00ff00;
+        }
+
+        80% {
+          color: #404040;
+        }
+
+        100% {
+          color: #ff0000;
+        }
+      }
+    }
+  }
+
+  & > .card-body {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+
+    & > p.card-desc {
+      font-size: 1.3rem;
+    }
+
+    & > .connect-wallet {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      margin: 30px 0;
+
+      & > p {
+        font-size: 1rem;
+      }
+
+      & > .connect {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+
+        & > button {
+          width: 150px;
+          height: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 7.5px;
+          margin-right: 10px;
+          font-size: 1rem;
+          outline: none;
+          border: none;
+          border-radius: 8px;
+          background-color: $primary-color;
+          color: #404040;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+            transition: all 0.2s ease-in-out;
+          }
+
+          &:disabled {
+            background-color: #e5c197;
+            transition: all 0.2s ease-in-out;
+            cursor: default;
+            box-shadow: none;
+          }
+        }
+      }
+
+      & > .account-details {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin: 15px 0;
+      }
+    }
+
+    & > .insert-amount-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+
+      & > p {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      & > .insert-amount {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & > .amount-label {
+          width: 30%;
+          height: 100%;
+        }
+
+        & > .amount-action {
+          width: 68%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+
+          & > input {
+            width: 100%;
+            height: auto;
+            outline: none;
+            padding: 5px;
+            border: solid 1px $secondary-color;
+            border-radius: 5px;
+          }
+
+          & > button {
+            width: 100%;
+            height: auto;
+            outline: none;
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: none;
+            background-color: $secondary-color;
+            color: $light-color;
+            font-weight: bold;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+
+            &:hover {
+              box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+              transition: all 0.2s ease-in-out;
+            }
+
+            &:disabled {
+              background-color: #e5c197;
+              transition: all 0.2s ease-in-out;
+              cursor: default;
+              box-shadow: none;
+            }
+          }
+        }
+      }
+    }
+
+    & > .rules-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+
+      & > p.rules {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    }
+
+    & > .call-winner-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+
+      & > button.call-winner {
+        width: 60%;
+        height: auto;
+        padding: 8px;
+        outline: none;
+        border: none;
+        border-radius: 10px;
+        background-color: $secondary-color;
+        color: $light-color;
+        font-weight: bold;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.4);
+          transition: all 0.2s ease-in-out;
+        }
+
+        &:disabled {
+          background-color: #e5c197;
+          transition: all 0.2s ease-in-out;
+          cursor: default;
+          box-shadow: none;
+        }
+      }
+    }
+
+    & > .winners-container {
+      width: 100%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      margin: 20px 0;
+
+      & > p.winners {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+
+      & > .last-winner {
+        width: 100%;
+        height: auto;
+        display: flex;
+        margin: 10px 0;
+
+        & > p {
+          font-size: 1.1rem;
+        }
+      }
+
+      & > .list-winners {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+
+        & > .list {
+          width: 100%;
+          height: auto;
+          margin: 2px 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

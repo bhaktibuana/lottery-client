@@ -1,1 +1,3 @@
-// this is components
+import Card from "./card";
+
+export { Card };
